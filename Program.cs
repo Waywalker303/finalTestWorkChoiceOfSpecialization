@@ -34,7 +34,7 @@ int count = 0;
 
 string[] arrayResult = new string[arrayScan.Length];
 ScanArray(arrayScan, arrayResult, lengthMax);
-//Console.WriteLine($"{PrintArray(arrayResult)}");
+Console.WriteLine($"{PrintArray(arrayResult)}");
 
 
 void ScanArray(string[] arrayTaken, string[] arrayNew, int lengthMax)
@@ -48,6 +48,20 @@ void ScanArray(string[] arrayTaken, string[] arrayNew, int lengthMax)
         count++;
         } 
     }
+}
+
+string PrintArray(string[] array)
+{ 
+  string result = string.Empty;
+  result = "[ ";
+  for (int i = 0; i < count; i++)
+  {
+    result += $"{array[i]}";
+    if (i < count - 1) 
+    result += ", ";
+  }
+  result += " ]";
+  return result;
 }
 
 
