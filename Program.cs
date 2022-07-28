@@ -29,6 +29,27 @@ else
   arrayScan = new string[]  {"hello", "2", "world", ":-)"};
 }
 
+int lengthMax = 3;
+int count = 0;
+
+string[] arrayResult = new string[arrayScan.Length];
+ScanArray(arrayScan, arrayResult, lengthMax);
+//Console.WriteLine($"{PrintArray(arrayResult)}");
+
+
+void ScanArray(string[] arrayTaken, string[] arrayNew, int lengthMax)
+{
+
+    for (int i = 0; i < arrayTaken.Length; i++)
+    {
+    if(arrayTaken[i].Length <= lengthMax)
+        {
+        arrayNew[count] = arrayTaken[i];
+        count++;
+        } 
+    }
+}
+
 
 int Input(string input)
 {
